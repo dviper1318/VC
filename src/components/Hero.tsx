@@ -119,8 +119,15 @@ export default function Hero() {
           className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95] mb-8"
         >
           <span className="block text-[#f0f4ff]">Mapping the</span>
-          <span className="block bg-gradient-to-r from-[#1fa5fd] via-[#4f7df9] to-[#002fff] bg-clip-text text-transparent">
-            Future
+          <span className="block relative">
+            <span className="bg-gradient-to-r from-[#1fa5fd] via-[#4f7df9] to-[#002fff] bg-clip-text text-transparent">
+              Frontier
+            </span>
+            <motion.span
+              className="absolute -inset-x-4 -inset-y-2 -z-10 rounded-3xl bg-[#1fa5fd] opacity-20 blur-3xl"
+              animate={{ opacity: [0.15, 0.25, 0.15] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            />
           </span>
         </motion.h1>
 
